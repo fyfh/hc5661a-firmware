@@ -52,7 +52,7 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: Enable SSR Plus
+   # - name: Enable SSR Plus
       run: cd openwrt && sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 
     - name: Update feeds
@@ -61,8 +61,8 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-#    - name: SSH connection to Actions
- #     uses: P3TERX/debugger-action@main     
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@main     
 
     - name: Load custom configuration
       env:
