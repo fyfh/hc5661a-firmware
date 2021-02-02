@@ -61,8 +61,8 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-    - name: SSH connection to Actions
-      uses: fyfh/debugger-action@master    
+    - name: Start SSH via tmate
+      uses: P3TERX/ssh2actions@main
 
     - name: Load custom configuration
       env:
