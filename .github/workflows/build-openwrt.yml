@@ -64,20 +64,20 @@ jobs:
     - name: Setup Debug Session
       uses: fyfh/debugger-action@master
 
-    - name: Load custom configuration
-      env:
-        CONFIG_FILE: '.config'
-        DIY_SH: diy.sh
-        THEME_A: theme-a-lean.sh
-      run: |
-        [ -e files ] && mv files openwrt/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_SH
-        chmod +x $THEME_A
-        cd openwrt
-        ../$DIY_SH
-        ../$THEME_A
-        make defconfig
+#    - name: Load custom configuration
+#      env:
+#        CONFIG_FILE: '.config'
+#        DIY_SH: diy.sh
+#        THEME_A: theme-a-lean.sh
+ #     run: |
+  #      [ -e files ] && mv files openwrt/files
+ #      [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+   #     chmod +x $DIY_SH
+   #     chmod +x $THEME_A
+    #    cd openwrt
+   #     ../$DIY_SH
+   #     ../$THEME_A
+     #   make defconfig
 
   #  - name: SSH connection to Actions
    #   uses: P3TERX/debugger-action@main     
