@@ -61,7 +61,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
       
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: fyfh/debugger-action@master
 
     - name: Load custom configuration
       env:
