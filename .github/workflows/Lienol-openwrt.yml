@@ -75,7 +75,7 @@ jobs:
         ../$DIY_SH
         make defconfig
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: fyfh/debugger-action@main
       if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
