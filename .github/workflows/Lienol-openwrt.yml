@@ -51,8 +51,8 @@ jobs:
         REPO_BRANCH: 19.07
       run: git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
 
-    - name: Enable SSR Plus
-      run: cd openwrt && echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
+#    - name: Enable SSR Plus
+  #    run: cd openwrt && echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
       
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
