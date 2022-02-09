@@ -74,9 +74,6 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
-    - name: SSH connection to Actions
-      uses: fyfh/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package
