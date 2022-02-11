@@ -53,7 +53,7 @@ jobs:
 
 #    - name: Enable SSR Plus
   #    run: cd openwrt && echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
-      
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -71,7 +71,8 @@ jobs:
         cd openwrt
         ../$DIY_SH
         make defconfig
-
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
     - name: Download package
       id: package
       run: |
