@@ -48,7 +48,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/Lienol/openwrt
-        REPO_BRANCH: 19.07
+        REPO_BRANCH: 21.02
       run: git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
 
 #    - name: Enable SSR Plus
