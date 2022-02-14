@@ -47,9 +47,8 @@ jobs:
         sudo -E apt-get -qq clean
     - name: Clone source code
       env: 
-        REPO_URL: https://github.com/openwrt/openwrt
-        REPO_BRANCH: openwrt-21.02
-      run: git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
+        REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
+      run: git clone $REPO_URL openwrt
 
 #    - name: Enable SSR Plus
   #    run: cd openwrt && echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
